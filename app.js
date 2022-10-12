@@ -67,7 +67,9 @@ const timer = () => {
             if (sound === true) {
                 finishSound.play()
             }
-            progress.classList.toggle('finish')
+            if (!(progress.classList.contains('finish'))) {
+                progress.classList.toggle('finish')
+            }
             setTimeout (() => {
                 settingsText.style.fontSize = "1.4rem"
                 settingsText.textContent = `${completedTimers} completed pomodoros`
