@@ -1,0 +1,25 @@
+{
+  "name": "pomodoro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "pomodoro",
+    "timer",
+    "round",
+    "rounded",
+    "corners",
+    "edges"
+  ],
+  "author": "Bautista Pietraroia",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^21.1.0"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.9.1"
+  }
+}

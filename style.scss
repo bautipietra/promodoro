@@ -1,0 +1,203 @@
+/* Basic styles */
+
+html { /* 1rem = 10 px */
+    font-size: 62.5%;
+    font-family: monospace;
+    transition: 1s;
+}
+
+*, *::after, *::before  {
+    box-sizing: border-box;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark Mode */
+
+.dark-mode {
+    filter: invert(1);
+    .circle {
+        filter: invert(1);
+        background-color: #e7e7e7;
+    }
+}
+
+/* Main content */
+
+body {
+    background-color: transparent;
+    color: #aaa;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    padding: 10px;
+    .main {
+        position: relative;
+        height: 180px;
+        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 50%;
+        z-index: 10;
+        gap: 15px;
+        #play {
+            transform: scale(1.2);
+        }
+        svg {
+            fill: #464646;
+            height: 20px;
+            width: 20px;
+            transition: 0.3s;
+            -webkit-app-region: no-drag;
+            transition: 0.4s;
+            &:hover {
+                fill: #aaa;
+            }
+        }
+        .settings {
+            position: absolute;
+            height: 180px;
+            width: 180px;
+            z-index: 10;
+            transition: 0.4s;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            gap: 20px;
+            border-radius: 50%;
+            #minutes {
+                background-color: #464646;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                padding: 5px;
+                font-size: 1.8rem;
+                text-align: center;
+                width: 50%;
+                color: #fff;
+                -webkit-app-region: no-drag;
+            }
+            #settings-text {
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-align: center;
+                width: 60%;
+                color: #464646;
+                user-select: none;
+            }
+            .buttons {
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+                div {
+                    svg {
+                        height: 20px;
+                        width: 20px;
+                    }
+                    #light {
+                        transform: scale(0.8);
+                    }
+                }
+            }
+        }
+    }
+    .circle {
+        position: absolute;
+        height: 180px;
+        width: 180px;
+        background-color: #181818;
+        border-radius: 50%;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-app-region: drag;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.7);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.7);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.7);
+        svg {
+            width: 180px;
+            height: 180px;
+            circle {
+                fill: none;
+                stroke-width: 3px;
+                stroke: #464646;
+                stroke-dashoffset: 0px;
+                stroke-dasharray: 300px;
+                transition: 1s;
+            }
+            #progress {
+                stroke: #aaa;
+                stroke-dashoffset: 300px;
+                transition: 1s linear;
+            }
+        }
+    }
+}
+
+/* Visibility */
+
+.visible {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+/* Finish Animation */
+
+.finish {
+    animation: finish 1 5s alternate;
+}
+
+@keyframes finish {
+    0% {
+        stroke: #aaa;
+        stroke-width: 3px;
+        stroke-dashoffset: 0px;
+    }
+    10% {
+        stroke: #fff;
+        stroke-width: 4px;
+    }
+    20% {
+        stroke: #aaa;
+        stroke-width: 3px;
+    }
+    30% {
+        stroke: #fff;
+        stroke-width: 4px;
+    }
+    40% {
+        stroke: #aaa;
+        stroke-width: 3px;
+    }
+    50% {
+        stroke: #fff;
+        stroke-width: 4px;
+    }
+    60% {
+        stroke: #aaa;
+        stroke-width: 3px;
+        stroke-dashoffset: 0px;
+    }
+    100% {
+        stroke: #fff;
+        stroke-width: 4px;
+        stroke-dashoffset: 300px;
+    }
+}
