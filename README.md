@@ -17,5 +17,5 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [WEB](htt
 
 ## Autor ✒️
 
-* **Bautista Pietraroia** - [Github](https://github.com/villanuevand)
+* **Bautista Pietraroia** - [Github](https://github.com/bautipietra)
 
