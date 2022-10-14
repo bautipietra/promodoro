@@ -1,6 +1,6 @@
 /* Basic styles */
-html { /* 1rem = 10 px */
-  font-size: 62.5%;
+html {
+  font-size: 62.5%; /* 1rem = 10 px */
   font-family: monospace;
   transition: 1s;
 }
@@ -21,13 +21,17 @@ html { /* 1rem = 10 px */
 /* Dark Mode */
 .dark-mode {
   filter: invert(1);
+  /* Dark Mode doesn't affects the "circle" shadow */
 }
 .dark-mode .circle {
   filter: invert(1);
   background-color: #e7e7e7;
 }
+.dark-mode .circle svg {
+  filter: invert(1);
+}
 
-/* Main content */
+/* Main styles */
 body {
   background-color: transparent;
   color: #aaa;
@@ -50,7 +54,7 @@ body .main {
   gap: 15px;
 }
 body .main #play {
-  transform: scale(1.2);
+  transform: scale(1.2); /* The play icon of boostrap is smaller than the other icons, so I enlarge it manually */
 }
 body .main svg {
   fill: #464646;
@@ -74,7 +78,7 @@ body .main .settings {
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  gap: 20px;
+  gap: 10px;
   border-radius: 50%;
 }
 body .main .settings #minutes {
@@ -112,13 +116,13 @@ body .main .settings .buttons div svg {
   width: 20px;
 }
 body .main .settings .buttons div #light {
-  transform: scale(0.8);
+  transform: scale(0.8); /* The play icon of boostrap is bigger than the other icons, so I manually make it smaller*/
 }
 body .circle {
   position: absolute;
   height: 180px;
   width: 180px;
-  background-color: #181818;
+  background-color: #000;
   border-radius: 50%;
   overflow: hidden;
   text-align: center;

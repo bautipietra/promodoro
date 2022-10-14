@@ -1,7 +1,7 @@
 /* Basic styles */
 
-html { /* 1rem = 10 px */
-    font-size: 62.5%;
+html {
+    font-size: 62.5%; /* 1rem = 10 px */
     font-family: monospace;
     transition: 1s;
 }
@@ -23,13 +23,18 @@ html { /* 1rem = 10 px */
 
 .dark-mode {
     filter: invert(1);
+
+    /* Dark Mode doesn't affects the "circle" shadow */
     .circle {
         filter: invert(1);
         background-color: #e7e7e7;
+        svg {
+            filter: invert(1);
+        }
     }
 }
 
-/* Main content */
+/* Main styles */
 
 body {
     background-color: transparent;
@@ -51,7 +56,7 @@ body {
         z-index: 10;
         gap: 15px;
         #play {
-            transform: scale(1.2);
+            transform: scale(1.2); /* The play icon of boostrap is smaller than the other icons, so I enlarge it manually */
         }
         svg {
             fill: #464646;
@@ -75,7 +80,7 @@ body {
             justify-content: center;
             align-items: center;
             flex-flow: column;
-            gap: 20px;
+            gap: 10px;
             border-radius: 50%;
             #minutes {
                 background-color: #464646;
@@ -109,7 +114,7 @@ body {
                         width: 20px;
                     }
                     #light {
-                        transform: scale(0.8);
+                        transform: scale(0.8); /* The moon icon of boostrap is bigger than the other icons, so I manually make it smaller*/
                     }
                 }
             }
@@ -119,7 +124,7 @@ body {
         position: absolute;
         height: 180px;
         width: 180px;
-        background-color: #181818;
+        background-color: #000;
         border-radius: 50%;
         overflow: hidden;
         text-align: center;

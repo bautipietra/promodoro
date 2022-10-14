@@ -1,12 +1,13 @@
 {
-  "name": "pomodoro",
+  "name": "prmodoro",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "scripts/electr.js",
   "scripts": {
     "start": "electron ."
   },
   "keywords": [
+    "promodoro",
     "pomodoro",
     "timer",
     "round",
@@ -18,8 +19,5 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^21.1.0"
-  },
-  "dependencies": {
-    "bootstrap-icons": "^1.9.1"
   }
 }

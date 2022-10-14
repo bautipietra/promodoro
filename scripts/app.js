@@ -1,16 +1,15 @@
 const minutesValue = document.querySelector('#minutes')
 const progress = document.querySelector('#progress')
 const settingsText = document.querySelector('#settings-text')
-let minutes = Number(minutesValue.value)
-let seconds = minutes * 60
-let total = 300
-let rest = total / seconds
+let minutes = Number(minutesValue.value) /* Value of the minutes input */
+let seconds = minutes * 60 
+let total = 300 /* total circle perimeter */
+let rest = total / seconds /* perimeter to subtract from the total per second */
 let completedTimers = 0
 let on = false
 
+/* Timer */
 const timer = () => {
-
-    /* Timer */
 
     minutes = Number(minutesValue.value)
     seconds = minutes * 60
@@ -25,19 +24,21 @@ const timer = () => {
         total = total - rest
         progress.style.strokeDashoffset = total
         seconds -= 1
+
+        /* Seconds to h:m:s */
         var hour = Math.floor(seconds / 3600);
         hour = (hour < 10)? '0' + hour : hour;
         var minute = Math.floor((seconds / 60) % 60);
         minute = (minute < 10)? '0' + minute : minute;
         var second = seconds % 60;
         second = (second < 10)? '0' + second : second;
+
         if (seconds > 0) {
             settingsText.style.fontSize = "2rem"
             settingsText.textContent = hour + ':' + minute + ':' + second;
         }
 
         /* Finish */
-
         if (seconds === 0) {
             setTimeout (() => {
                 progress.classList.toggle('finish')
