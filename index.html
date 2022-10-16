@@ -4,14 +4,15 @@
         <meta charset="UTF-8">
         <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-        <title>Pomodoro</title>
+        <meta name="author" content="Bautista Pietraroia">
+        <title>Promodoro</title>
         <!-- CSS -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        <!-- Finish Audio -->
-        <audio src="alert.mp3"></audio>
-        <!-- Content Loader -->
+        <!-- Finish Sound -->
+        <audio src="sources/alert.mp3"></audio>
+        <!-- Progress circle -->
         <div class="circle">
             <svg viewBox="0 0 100 100">
                 <circle cx="50" cy="50" r="45"></circle>
@@ -64,8 +65,7 @@
                 </div>
             </div>
         </div>
-        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
         <!-- JS -->
-        <script src="app.js"></script>
+        <script src="scripts/app.js"></script>
     </body>
 </html>
