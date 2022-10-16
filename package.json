@@ -1,8 +1,8 @@
 {
-  "name": "promodoro",
+  "name": "pomodoro",
   "version": "1.0.0",
-  "description": "Promodoro es una aplicación pomodoro práctica y minimalista. Compatible tanto con windows, linux y mac.",
-  "main": "scripts/electr.js",
+  "description": "",
+  "main": "main.js",
   "scripts": {
     "postinstall": "install-app-deps",
     "start": "electron .",
@@ -12,7 +12,6 @@
     "build-windows": "electron-builder -w"
   },
   "keywords": [
-    "promodoro",
     "pomodoro",
     "timer",
     "round",
@@ -23,16 +22,9 @@
   "author": "Bautista Pietraroia",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^21.1.0",
-    "electron-packager": "^16.0.0",
-    "electron-builder": "^23.6.0"
+    "electron": "^21.1.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bautipietra/desktop-pomodoro.git"
-  },
-  "bugs": {
-    "url": "https://github.com/bautipietra/desktop-pomodoro/issues"
-  },
-  "homepage": "https://github.com/bautipietra/desktop-pomodoro#readme"
+  "dependencies": {
+    "bootstrap-icons": "^1.9.1"
+  }
 }
