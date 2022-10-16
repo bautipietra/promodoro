@@ -1,8 +1,8 @@
-const { app, BrowserWindow} = require('electron')
+const {app, BrowserWindow} = require('electron')
 
 const createWindow = () => {
     const win = new BrowserWindow({
-        icon: 'tomato.ico',
+        icon: '../sources/promodoro.ico',
         width: 200,
         height: 200,
         transparent: true,
